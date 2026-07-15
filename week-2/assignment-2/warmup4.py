@@ -1,4 +1,3 @@
-print (something here but i'm missing quotation marks")
 print ("something here but i'm missing quotation marks")
 
 #Here is my buggy line of code: print (something here but i'm missing quotation marks")
