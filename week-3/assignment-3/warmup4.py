@@ -9,5 +9,5 @@ else:
 
 if user_number % 2 != 0:
     print (f"{user_number} is odd.")
-elif user_number % 2 == 0:
+else:
     print (f"{user_number} is even.")

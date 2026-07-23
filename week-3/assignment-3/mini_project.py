@@ -1,3 +1,5 @@
+valid = True
+
 day = input("What day is it? ")
 day = day.strip().lower()
 
@@ -13,8 +15,9 @@ if time != "morning" and time != "afternoon" and time != "evening":
    valid = False
 
 #Begin day/time checks.
-if day == "monday" and time == "morning":
-    print("Suggestion: Morning lesson work with breakfast!")
+if valid:
+    if day == "monday" and time == "morning":
+        print("Suggestion: Morning lesson work with breakfast!")
 elif day == "monday" and time == "afternoon":
      print ("Afternoon lesson work with a snack!")
 elif day == "monday" and time == "evening":
