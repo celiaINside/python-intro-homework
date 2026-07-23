@@ -1,6 +1,6 @@
 score = 93
 
-print (f"Score: {score}")
+print (f"Score: 93")
 
 if score >= 0 and score < 60:
     print ("Grade: F")
