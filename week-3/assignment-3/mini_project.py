@@ -16,9 +16,9 @@ elif time != "morning" and time != "afternoon" and time != "evening":
 #   print("Sorry, I don't recognize that time. Try: morning, afternoon, evening...")
 
 elif day == "monday" or day == "tuesday" or day == "wednesday" or day == "thursday" and time == "morning":
-    print("Suggestion: Morning lesson work with a cup of coffee!")
+    print("Suggestion: Morning lesson work with breakfast!")
 elif day == "monday" or day == "tuesday" or day == "wednesday" or day == "thursday" and time == "afternoon":
-    print("Suggestion: Afternoon lesson work with a cup of coffee!")
+    print("Suggestion: Afternoon lesson work with a snack!")
 elif day == "monday" or day == "tuesday" or day == "wednesday" or day == "thursday" and time == "evening":
     print("Suggestion: Evening lesson work with a cup of tea!")
 elif day == "friday" and time == "morning":
@@ -29,7 +29,7 @@ elif day == "friday" and time == "evening":
     print(f"Suggestion: Go for a walk around the neighborhood!")
 
 elif day == "saturday" and time == "morning":
-    print(f"Suggestion: Morning lesson work with a cup of tea!")
+    print(f"Suggestion: Morning lesson work with a cup of matcha!")
 elif day == "saturday" and time == "afternoon":
     print(f"Suggestion: Explore the city!")
 elif day == "saturday" and time == "evening":
