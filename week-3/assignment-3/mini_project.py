@@ -6,8 +6,8 @@ time = time.strip().lower()
 
 if day!= "friday" and day!= "saturday" and day != "sunday": 
     print("Sorry, we only recognize weekend days here.")
-elif time != "morning" and time != "afternoon" and time != "night":
-    print("Sorry, try a time of day like morning, afternoon, or night.")
+elif time != "morning" and time != "afternoon" and time != "evening":
+    print("Sorry, try a time of day like morning, afternoon, or evening.")
 
 if day == "friday" and time == "morning":
     print(f"What day is it? {day}")
@@ -17,7 +17,7 @@ if day == "friday" and time == "afternoon":
     print(f"What day is it? {day}")
     print(f"What time of day? {time}")
     print(f"Suggestion: Afternoon lesson work with a cup of coffee!")
-if day == "friday" and time == "night":
+if day == "friday" and time == "evening":
     print(f"What day is it? {day}")
     print(f"What time of day? {time}")
     print(f"Suggestion: Go for a walk around the neighborhood!")
@@ -30,7 +30,7 @@ if day == "saturday" and time == "afternoon":
     print(f"What day is it? {day}")
     print(f"What time of day? {time}")
     print(f"Suggestion: Explore the city!")
-if day == "saturday" and time == "night":
+if day == "saturday" and time == "evening":
     print(f"What day is it? {day}")
     print(f"What time of day? {time}")
     print(f"Suggestion: Go out with friends tonight!")
@@ -43,7 +43,7 @@ if day == "sunday" and time == "afternoon":
     print(f"What day is it? {day}")
     print(f"What time of day? {time}")
     print(f"Suggestion: Cook a great meal!")
-if day == "sunday" and time == "night":
+if day == "sunday" and time == "evening":
     print(f"What day is it? {day}")
     print(f"What time of day? {time}")
     print(f"Suggestion: Unwind with your favorite show!")
