@@ -5,7 +5,7 @@ day = day.strip().lower()
 time = time.strip().lower()
 
 if day!= "friday" and day!= "saturday" and day != "sunday": 
-    print("Sorry, we only recognize weekend days here.")
+    print("Sorry, I don't recognize that day. Try: Monday, Tuesday, Wednesday...")
 elif time != "morning" and time != "afternoon" and time != "evening":
     print("Sorry, try a time of day like morning, afternoon, or evening.")
 
