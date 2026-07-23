@@ -6,8 +6,11 @@ time = time.strip().lower()
 
 if day != "monday" and day != "tuesday" and day != "wednesday" and day != "thursday" and day != "friday" and day != "saturday" and day != "sunday":
     print("Sorry, I don't recognize that day. Try: Monday, Tuesday, Wednesday...")
+    valid = False
+
 if time != "morning" and time != "afternoon" and time != "evening":
    print("Sorry, I don't recognize that time. Try: morning, afternoon, evening...")
+   valid = False
 
 #Begin day/time checks.
 if day == "monday" and time == "morning":
