@@ -1,14 +1,12 @@
 age = int(input("Enter your age: "))
-          
-print (f"Enter your age: {age}")
 
-if age > 0 and age < 12:
+if age >= 0 and age <= 12:
     print ("You are a Child.")
-elif age > 12 and age < 18:
+elif age >= 13 and age <= 17:
     print ("You are a Teen.")
-elif age > 18 and age < 65:
+elif age >= 18 and age <= 64:
     print ("You are an Adult.")
-elif score >= 80 and score <= 89:
+elif score >= 80 and age <= 89:
     print ("Grade: B")
 else:
     print ("You are a Senior.")
