@@ -1,21 +1,15 @@
 day = input("What day is it? ")
+day = day.strip().lower()
 
 time = input("What time of day is it? ")
-
-day = day.strip().lower()
 time = time.strip().lower()
 
 if day != "monday" and day != "tuesday" and day != "wednesday" and day != "thursday" and day != "friday" and day != "saturday" and day != "sunday":
     print("Sorry, I don't recognize that day. Try: Monday, Tuesday, Wednesday...")
-elif time != "morning" and time != "afternoon" and time != "evening":
+if time != "morning" and time != "afternoon" and time != "evening":
    print("Sorry, I don't recognize that time. Try: morning, afternoon, evening...")
 
-#if day != "monday" and day != "tuesday" and day != "wednesday" and day != "thursday" and day != "friday" and day != "saturday" and day != "sunday":
-#    print("Sorry, I don't recognize that day. Try: Monday, Tuesday, Wednesday...")
-
-#if time != "morning" and time != "afternoon" and time != "evening":
-#   print("Sorry, I don't recognize that time. Try: morning, afternoon, evening...")
-
+#Begin day/time checks.
 if day == "monday" and time == "morning":
     print("Suggestion: Morning lesson work with breakfast!")
 elif day == "monday" and time == "afternoon":
