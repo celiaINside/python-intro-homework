@@ -19,7 +19,7 @@ if valid:
     if day == "monday" and time == "morning":
         print("Suggestion: Morning lesson work with breakfast!")
 elif day == "monday" and time == "afternoon":
-     print ("Afternoon lesson work with a snack!")
+    print ("Afternoon lesson work with a snack!")
 elif day == "monday" and time == "evening":
     print ("Evening lesson work with a cup of tea!")
 
