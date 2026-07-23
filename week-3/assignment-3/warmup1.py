@@ -2,9 +2,9 @@ score = 93
 
 print (f"Score: {score}")
 
-if score < 60:
+if score >= 0 and score < 60:
     print ("Grade: F")
-elif score >= 61 and score <= 69:
+elif score >= 60 and score <= 69:
     print ("Grade: D")
 elif score >= 70 and score <= 79:
     print ("Grade: C")

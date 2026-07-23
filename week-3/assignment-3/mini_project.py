@@ -4,10 +4,12 @@ time = input("What time of day is it? ")
 day = day.strip().lower()
 time = time.strip().lower()
 
-if day!= "friday" and day!= "saturday" and day != "sunday": 
+if day == "monday" or day == "tuesday" or day == "wednesday" or day == "thursday": 
+    print("Suggestion: Find a new hobby!")
+elif day != "monday" or day != "tuesday" or day != "wednesday" or day != "thursday" or day != "friday" or day != "saturday" or day != "sunday":
     print("Sorry, I don't recognize that day. Try: Monday, Tuesday, Wednesday...")
 elif time != "morning" and time != "afternoon" and time != "evening":
-    print("Sorry, I don't recognize that day. Try: morning, afternoon, evening...")
+    print("Sorry, I don't recognize that time. Try: morning, afternoon, evening...")
 
 if day == "friday" and time == "morning":
     print(f"Suggestion: Morning lesson work with a cup of coffee!")
