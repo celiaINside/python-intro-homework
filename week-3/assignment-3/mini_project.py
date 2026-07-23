@@ -6,7 +6,8 @@ time = time.strip().lower()
 
 if day != "monday" and day != "tuesday" and day != "wednesday" and day != "thursday" and day != "friday" and day != "saturday" and day != "sunday":
     print("Sorry, I don't recognize that day. Try: Monday, Tuesday, Wednesday...")
-elif time != "morning" and time != "afternoon" and time != "evening":
+
+if time != "morning" and time != "afternoon" and time != "evening":
    print("Sorry, I don't recognize that time. Try: morning, afternoon, evening...")
 
 #if day != "monday" and day != "tuesday" and day != "wednesday" and day != "thursday" and day != "friday" and day != "saturday" and day != "sunday":
@@ -17,31 +18,31 @@ elif time != "morning" and time != "afternoon" and time != "evening":
 
 elif day == "monday" and time == "morning":
     print("Suggestion: Morning lesson work with breakfast!")
-    if day == "monday" and time == "afternoon":
+elif day == "monday" and time == "afternoon":
         print ("Afternoon lesson work with a snack!")
-    elif day == "monday" and time == "evening":
+elif day == "monday" and time == "evening":
             print ("Evening lesson work with a cup of tea!")
 
 elif day == "tuesday" and time == "morning":
-    print("Suggestion: Morning lesson work with breakfast!")
-    if day == "tuesday" and time == "afternoon":
-        print ("Afternoon lesson work with a snack!")
-    elif day == "tuesnday" and time == "evening":
-            print ("Evening lesson work with a cup of tea!")
+    print("Suggestion: Morning with a big breakfast!")
+elif day == "tuesday" and time == "afternoon":
+        print ("Afternoon nap!")
+elif day == "tuesday" and time == "evening":
+            print ("Evening Netflix time!")
 
 elif day == "wednesday" and time == "morning":
-    print("Suggestion: Morning lesson work with breakfast!")
-    if day == "wednesday" and time == "afternoon":
-        print ("Afternoon lesson work with a snack!")
-    elif day == "wednesday" and time == "evening":
-            print ("Evening lesson work with a cup of tea!")
+    print("Suggestion: Morning lesson work with acai bowl!")
+elif day == "wednesday" and time == "afternoon":
+        print ("Afternoon lesson work with a cold drink!")
+elif day == "wednesday" and time == "evening":
+            print ("Evening reading with a cup of tea!")
 
 elif day == "thursday" and time == "morning":
-    print("Suggestion: Morning lesson work with breakfast!")
-    if day == "thursday" and time == "afternoon":
-        print ("Afternoon lesson work with a snack!")
-    elif day == "thursday" and time == "evening":
-            print ("Evening lesson work with a cup of tea!")
+    print("Suggestion: Morning lesson work! Lock in!")
+elif day == "thursday" and time == "afternoon":
+        print ("Afternoon lesson work! Lock in!")
+elif day == "thursday" and time == "evening":
+            print ("Evening lesson work! Lock in!")
 
 elif day == "friday" and time == "morning":
     print(f"Suggestion: Morning lesson work with a cup of coffee!")
