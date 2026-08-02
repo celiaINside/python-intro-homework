@@ -38,7 +38,7 @@ print(unique_subjects)
 # find high scores (above 75)
 high_scores = []
 for student in students:
-    if student["score"] >= 75:
+    if student["score"] > 75:
         high_scores.append(student["name"])
 print(high_scores)
 
