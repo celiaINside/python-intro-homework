@@ -27,20 +27,17 @@ total_of_scores = 0
 for student in students:
     total_of_scores += student["score"]
 average = total_of_scores / len(students)
-print(f"Class average: {average}")
 
 # List all unique subjects — use a set to collect subjects as you loop, then print them.
 unique_subjects = set()
 for student in students:
     unique_subjects.add(student["subject"])
-print(unique_subjects)
 
 # find high scores (above 75)
 high_scores = []
 for student in students:
     if student["score"] > 75:
         high_scores.append(student["name"])
-print(high_scores)
 
 #print section
 print(f"Top scorer: {', '.join(top_scorer)} ({highest_score})")
