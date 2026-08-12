@@ -45,7 +45,7 @@ while True:
         try:
             user_number = int(input("Enter a number: "))
         except ValueError:
-                print("Please enter a number from 1 to 5.")
+                print("Please enter a valid number.")
                 continue
         for number in numbers:
                 if number == user_number:
