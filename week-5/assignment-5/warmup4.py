@@ -5,5 +5,5 @@ for i in range (0,31):
         print ("Fizz")
     elif i % 5 == 0:
         print ("Buzz")
-    elif i % i == 0:
+    else:
         print (i)

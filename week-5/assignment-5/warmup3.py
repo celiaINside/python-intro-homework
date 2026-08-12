@@ -1,4 +1,4 @@
-names = ["Mark", "Joy", "Erin", "Leylah"]
+names = ["Mark", "Joy", "Erin", "Marcus"]
 
 user_name = input("Enter a name to search for: ").title()
 
@@ -12,5 +12,5 @@ for name in names:
         break
     index +=1
 
-if name != user_name:
+if not found:
     print(f"{user_name} was not found in the list.")
