@@ -8,7 +8,14 @@ while True:
     print("4. Sort the list")
     print("5. Quit")
 
-    user_option = (int(input("Choose an option (1-5): ")))
+    try:
+        user_option = (int(input("Choose an option (1-5): ")))
+    except ValueError:
+        print("Please enter a number from 1 to 5.")
+        continue
+    if user_option < 1 or user_option > 5:
+        print("Please enter a number from 1 to 5.")
+        continue
 
 #Find minimum — loop through the list and track the smallest value. Do not use Python's built-in min().
     minimum = numbers[0]
@@ -49,17 +56,20 @@ while True:
 #Sort — implement bubble sort: repeatedly loop through adjacent pairs, swap if out of order, and repeat until no swaps occur. Print the sorted list. Do not use sorted() or .sort().
 
     n = len(numbers)
+    sorted_numbers = numbers.copy()
 
     if user_option == 4:
+        def bubble_sort(numbers):
             for i in range(n-1):
                 swapped = False
                 for j in range(n-i-1):
-                    if numbers[j] > numbers[j+1]:
-                        numbers[j], numbers[j+1] = numbers[j+1], numbers[j]
+                    if sorted_numbers[j] > sorted_numbers[j+1]:
+                        sorted_numbers[j], sorted_numbers[j+1] = sorted_numbers[j+1], sorted_numbers[j]
                         swapped = True
                 if not swapped:  
                     break
-            print(numbers)
+            return sorted_numbers
+        print(bubble_sort(numbers))
 
 #Quit — print a goodbye message and exit the loop.
 

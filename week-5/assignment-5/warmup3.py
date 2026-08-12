@@ -1,12 +1,12 @@
 names = ["Mark", "Joy", "Erin", "Marcus"]
 
-user_name = input("Enter a name to search for: ").title()
+user_name = input("Enter a name to search for: ").lower()
 
 found = False
 index = 0
 
 for name in names:
-    if name == user_name:
+    if name.lower() == user_name.lower():
         print (f"Found {user_name} at {index}.")
         found = True
         break
