@@ -7,7 +7,7 @@ index = 0
 
 for name in names:
     if name.lower() == user_name.lower():
-        print (f"Found {user_name} at {index}.")
+        print (f"Found {name} at {index}.")
         found = True
         break
     index +=1
