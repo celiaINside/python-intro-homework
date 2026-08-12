@@ -42,24 +42,26 @@ while True:
     index = 0
 
     if user_option == 3:
+        try:
             user_number = int(input("Enter a number: "))
-            for number in numbers:
+        except ValueError:
+                print("Please enter a number from 1 to 5.")
+                continue
+        for number in numbers:
                 if number == user_number:
                     print (f"Found {user_number} at {index}.")
                     found = True
                     break
                 index +=1
-
-            if not found:
+        if not found:
                 print(f"{user_number} not found.")
 
 #Sort — implement bubble sort: repeatedly loop through adjacent pairs, swap if out of order, and repeat until no swaps occur. Print the sorted list. Do not use sorted() or .sort().
 
-    n = len(numbers)
-    sorted_numbers = numbers.copy()
-
     if user_option == 4:
         def bubble_sort(numbers):
+            n = len(numbers)
+            sorted_numbers = numbers.copy()
             for i in range(n-1):
                 swapped = False
                 for j in range(n-i-1):

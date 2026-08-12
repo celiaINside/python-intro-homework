@@ -1,6 +1,6 @@
 names = ["Mark", "Joy", "Erin", "Marcus"]
 
-user_name = input("Enter a name to search for: ").lower()
+user_name = input("Enter a name to search for: ")
 
 found = False
 index = 0
