@@ -1,20 +1,9 @@
 #1
-def greet(name, greeting="Hello"):
-    print("Hello, " + name + "!")
-
-greet("Alex")
-
-#2
-def greet(name, greeting):
-    print(greeting + ", " + name + "!")
-
-greet("Alex", "Good morning")
-
-#3
 name = "Alex"
 
-def greet(name, greeting):
+def greet(name, greeting="Hello"):
     print(greeting + ", " + name + "!")
 
-greet(name, "Hello, ")
-
+greet("Alex")
+greet("Alex", "Good morning")
+greet(name, "Hello")
