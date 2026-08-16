@@ -21,3 +21,9 @@ print_celsius_summary(100, fahrenheit)
 
 celsius = fahrenheit_to_celsius(72)
 print_fahrenheit_summary(72, celsius)
+
+#alternate style of printing results: 
+
+# celsius = 100
+# fahrenheit = celsius_to_fahrenheit(celsius)
+# print(f"{celsius}°C = {fahrenheit:.1f}°F")
