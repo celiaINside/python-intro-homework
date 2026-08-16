@@ -1,7 +1,4 @@
 #Celsius to Fahrenheit function
-def get_celsius():
-    return celsius
-
 def celsius_to_fahrenheit(celsius):
     return ((celsius * 9/5) + 32)
 
@@ -9,9 +6,6 @@ def print_celsius_summary(celsius, fahrenheit):
     print(f"{celsius}°C = {fahrenheit:.1f}°F")
 
 #Fahrenheit to Celsius function
-def get_fahrenheit():
-    return fahrenheit
-
 def fahrenheit_to_celsius(fahrenheit):
     return (fahrenheit - 32) * 5/9
 
@@ -22,7 +16,7 @@ def print_fahrenheit_summary(fahrenheit, celsius):
 fahrenheit = celsius_to_fahrenheit(0)
 print_celsius_summary(0, fahrenheit)
 
-fahrenheit = celsius_to_fahrenheit(0)
+fahrenheit = celsius_to_fahrenheit(100)
 print_celsius_summary(100, fahrenheit)
 
 celsius = fahrenheit_to_celsius(72)
