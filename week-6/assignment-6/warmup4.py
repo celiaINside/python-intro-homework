@@ -1,5 +1,5 @@
 def is_valid_score(score):
-    if 0 <= score <= 100:
+    if isinstance(score, int) and 0 <= score <= 100:
         return True
     else: 
         return False
