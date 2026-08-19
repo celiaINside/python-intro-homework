@@ -83,9 +83,9 @@ def main():
                 target = int(input("Enter a number: "))
                 index = search(numbers, target)
                 if index != -1:
-                    print(f"Found the number at index {index}.")
+                    print(f"Found at index {index}.")
                 else:
-                    print("Number not found.")
+                    print("Not found.")
             except ValueError:
                 print("Please enter a valid number.")
         elif user_option == "4":
