@@ -17,8 +17,8 @@ def show_menu():
         print("5. Quit")
      
         try:
-            user_option = (int(input("Choose an option (1-5): ")))
-            if user_option < 1 or user_option > 5:
+            user_option = (input("Choose an option (1-5): "))
+            if not user_option.isdigit() or not 1 <= int(user_option) <= 5:
                 print("Please enter a number from 1 to 5.")
                 continue
 
@@ -72,13 +72,13 @@ def bubble_sort(numbers):
 def main():
     while True:
         user_option = show_menu()
-        if user_option == 1:
+        if user_option == "1":
             minimum = find_min(numbers)
             print(f"The minimum is {minimum}.")
-        elif user_option == 2:
+        elif user_option == "2":
             maximum = find_max(numbers)
             print(f"The maximum is {maximum}.")
-        elif user_option == 3:
+        elif user_option == "3":
             try:
                 target = int(input("Enter a number: "))
                 index = search(numbers, target)
@@ -88,10 +88,10 @@ def main():
                     print("Number not found.")
             except ValueError:
                 print("Please enter a valid number.")
-        elif user_option == 4:
+        elif user_option == "4":
             sorted_numbers = bubble_sort(numbers)
             print(f"Sorted: {sorted_numbers}")
-        elif user_option == 5:
+        elif user_option == "5":
             print("Goodbye!")
             break
         else:
