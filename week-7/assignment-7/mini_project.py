@@ -1,5 +1,6 @@
 import os
 import csv
+from datetime import datetime
 
 print(os.getcwd())
 if os.path.exists("../data/expenses.csv"):
@@ -13,12 +14,9 @@ with open('../data/expenses.csv', 'r') as file:
     for row in rows:
         row["amount"] = float(row["amount"])
     food = [item for item in rows if item['category'] == 'Food']
-    for item in food:
-        item['amount'] = (item['amount'])
 
 total_value = sum(item['amount'] for item in food)
 
-from datetime import datetime
 now = datetime.now()
 with open('food_report.txt', 'w') as file:
     file.write(f"Food Expense Report — generated {now.strftime('%B %d, %Y')}\n")
