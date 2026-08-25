@@ -5,7 +5,7 @@ print(os.getcwd())
 if os.path.exists("../data/expenses.csv"):
     print("expenses.csv found.")
 else:
-    print("An error has ocurred.")
+    print("Error: expenses.csv not found.")
     exit()
 
 with open('../data/expenses.csv', 'r') as file:
@@ -14,7 +14,7 @@ with open('../data/expenses.csv', 'r') as file:
         row["amount"] = float(row["amount"])
     food = [item for item in rows if item['category'] == 'Food']
     for item in food:
-        item['amount'] = float(item['amount'])
+        item['amount'] = (item['amount'])
 
 total_value = sum(item['amount'] for item in food)
 
@@ -24,4 +24,4 @@ with open('food_report.txt', 'w') as file:
     file.write(f"Food Expense Report — generated {now.strftime('%B %d, %Y')}\n")
     for item in food:
         file.write(f"{item['date']}: ${item['amount']:.2f}\n")
-    file.write(f"Total: ${total_value}")
+    file.write(f"Total: ${total_value:.2f}")
