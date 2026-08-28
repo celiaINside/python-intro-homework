@@ -1,8 +1,10 @@
-user_number = input("Enter a number: ")
+while True: 
+    user_number = input("Enter a number: ")
 
-try:
-    user_number = float(user_number)
-    print(f"You entered: {user_number}")
+    try:
+        user_number = float(user_number)
+        print(f"You entered: {user_number}")
+        break
     
-except ValueError:
-    print("That's not a valid number. Try again.")
+    except ValueError:
+        print("That's not a valid number. Try again.")
