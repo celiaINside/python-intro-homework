@@ -3,7 +3,7 @@ while True:
 
     try:
         user_number = float(user_number)
-        print(f"You entered: {user_number}")
+        print(f"You entered: {user_number:.1f}")
         break
     
     except ValueError:
