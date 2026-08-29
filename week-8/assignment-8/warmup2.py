@@ -1,8 +1,8 @@
 input1 = input("Enter the numerator: ")
 input2 = input("Enter the denominator: ")
 
-input1 = int(input1)
-input2 = int(input2)
+input1 = float(input1)
+input2 = float(input2)
 
 try: 
     result = (input1) / (input2)
