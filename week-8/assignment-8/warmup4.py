@@ -1,3 +1,4 @@
+# requirements.txt contents:
 # certifi==2026.7.22
 # charset-normalizer==3.5.1
 # idna==3.19
@@ -6,4 +7,4 @@
 
 import requests
 
-print(requests.__version__)
+print(f"requests version: {requests.__version__}")
