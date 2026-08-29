@@ -7,6 +7,6 @@ try:
     input1 = float(input1)
     input2 = float(input2)
     result = (input1) / (input2)
-    print(f"{input1} ÷ {input2} = {result:.1f}")
+    print(f"{input1} ÷ {input2} = {result}")
 except ZeroDivisionError:
     print("Can't divide by zero — please try a non-zero denominator.")
