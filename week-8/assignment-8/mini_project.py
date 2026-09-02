@@ -14,8 +14,8 @@ else:
     clean_rows = []
     for row_number, row in enumerate(rows, start = 1):
         if None in row:
-            key_error_message = f"Row {row_number}: extra column detected — skipped"
-            skipped_rows.append(key_error_message)
+            none_message = f"  Row {row_number}: extra column detected — skipped"
+            skipped_rows.append(none_message)
             continue
 
         try:
@@ -27,13 +27,17 @@ else:
 
             clean_rows.append(entry)
         except ValueError: 
-            value_error_message = f"Row {row_number}: ValueError — could not convert {row['amount']} to float."
+            value_error_message = f"  Row {row_number}: ValueError — could not convert '{row['amount']}' to float."
             skipped_rows.append(value_error_message)
+        except KeyError as e:
+            key_error_message = f"  Row {row_number}: missing column {e}"
+            skipped_rows.append(key_error_message)
+            continue
 
 skipped_total = len(skipped_rows)
 clean_total = len(clean_rows)
-attempted = skipped_total + clean_total
-parsed = attempted - skipped_total
+attempted = len(rows)
+parsed = len(clean_rows)
 
 print("=== CSV Report ===")
 print(f"Rows attempted: {attempted}")
@@ -49,4 +53,4 @@ for row in clean_rows:
     name = row['name']
     category = row['category']
     amount = row['amount']
-    print(f"{name} | {category} | {amount}")
+    print(f"  {name} | {category} | {amount}")
