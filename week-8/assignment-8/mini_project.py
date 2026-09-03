@@ -35,12 +35,12 @@ try:
                 skipped_rows.append(key_error_message)
 
 except FileNotFoundError:
-    print('Error: "messy_data.csv" was not found. Please check the file path.')
+    print('Error: "../data/messy_data.csv" was not found. Please check the file path.')
 
 else:
     skipped_total = len(skipped_rows)
-    attempted
     parsed = len(clean_rows)
+    attempted = skipped_total + parsed
     print("=== CSV Report ===")
     print(f"Rows attempted:  {attempted}")
     print(f"Rows parsed:      {parsed}")
