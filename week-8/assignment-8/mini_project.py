@@ -12,12 +12,16 @@ try:
         for row_number, row in enumerate(reader, start = 1):
             attempted+= 1
 
-            if None in row:
-                none_message = f"Row {row_number}: extra column detected — skipped"
-                skipped_rows.append(none_message)
-                continue
-
             try:
+                name = row["name"]
+                category = row["category"]
+                amount = float(row["amount"])
+
+                if None in row:
+                    none_message = f"Row {row_number}: extra column detected — skipped"
+                    skipped_rows.append(none_message)
+                    continue
+
                 entry = {
                     "name": row["name"],
                     "category": row["category"],
