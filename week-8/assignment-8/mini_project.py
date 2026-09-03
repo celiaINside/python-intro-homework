@@ -33,7 +33,6 @@ else:
         except KeyError as e:
             key_error_message = f"  Row {row_number}: KeyError - could not find key {e}"
             skipped_rows.append(key_error_message)
-            continue
 
     skipped_total = len(skipped_rows)
     attempted = len(rows)
@@ -46,11 +45,11 @@ else:
     print()
     print("Skipped rows:")
     for row in skipped_rows: 
-        print(f" {row}")
+        print(f"{row}")
     print()
     print(f"Clean data:")
     for row in clean_rows:
         name = row['name']
         category = row['category']
         amount = row['amount']
-        print(f"  {name} | {category} | ${amount}")
+        print(f"  {name} | {category} | ${amount:.2f}")
