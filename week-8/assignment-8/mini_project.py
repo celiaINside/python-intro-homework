@@ -40,7 +40,6 @@ except FileNotFoundError:
 else:
     skipped_total = len(skipped_rows)
     parsed = len(clean_rows)
-    attempted = skipped_total + parsed
     print("=== CSV Report ===")
     print(f"Rows attempted:  {attempted}")
     print(f"Rows parsed:      {parsed}")
