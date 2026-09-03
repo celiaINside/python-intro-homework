@@ -27,9 +27,9 @@ with file:
                 amount = float(row["amount"])
 
                 entry = {
-                    "name": row["name"],
-                    "category": row["category"],
-                    "amount": float(row["amount"])
+                    "name": name,
+                    "category": category,
+                    "amount": amount
                 }
 
                 clean_rows.append(entry)
