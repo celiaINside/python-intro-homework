@@ -37,9 +37,9 @@ else:
     parsed = len(clean_rows)
 
     print("=== CSV Report ===")
-    print(f"Rows attempted: {attempted}")
-    print(f"Rows parsed: {parsed}")
-    print(f"Rows skipped: {skipped_total}")
+    print(f"Rows attempted:  {attempted}")
+    print(f"Rows parsed:      {parsed}")
+    print(f"Rows skipped:     {skipped_total}")
     print()
     print("Skipped rows:")
     for row in skipped_rows: 
