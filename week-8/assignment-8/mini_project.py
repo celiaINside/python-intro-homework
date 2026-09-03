@@ -13,7 +13,7 @@ except FileNotFoundError:
 else: 
     skipped_rows = []
     clean_rows = []
-    for row_number, row in enumerate(rows, start = 2):
+    for row_number, row in enumerate(rows, start = 1):
         if None in row:
             none_message = f"  Row {row_number}: extra column detected — skipped"
             skipped_rows.append(none_message)
