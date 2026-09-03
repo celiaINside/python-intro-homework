@@ -1,4 +1,3 @@
-import os
 
 try:
    with open("../data/missing.txt", "r") as file:
