@@ -2,9 +2,13 @@ import os
 import csv
 
 try:
-   with open("../data/messy_data.csv", "r") as file:
+   file = open("../data/messy_data.csv", "r")
+except FileNotFoundError:
+    print('Error: "../data/messy_data.csv" was not found. Please check the file path.')
+    exit()
+
+with file:
         reader = csv.DictReader(file)
-        exit()
 
         skipped_rows = []
         clean_rows = []
@@ -39,24 +43,20 @@ try:
                 key_error_message = f"Row {row_number}: KeyError - could not find key {e}"
                 skipped_rows.append(key_error_message)
 
-except FileNotFoundError:
-    print('Error: "../data/messy_data.csv" was not found. Please check the file path.')
-
-else:
-    skipped_total = len(skipped_rows)
-    parsed = len(clean_rows)
-    print("=== CSV Report ===")
-    print(f"Rows attempted:  {attempted}")
-    print(f"Rows parsed:      {parsed}")
-    print(f"Rows skipped:     {skipped_total}")
-    print()
-    print("Skipped rows:")
-    for row in skipped_rows: 
+skipped_total = len(skipped_rows)
+parsed = len(clean_rows)
+print("=== CSV Report ===")
+print(f"Rows attempted:  {attempted}")
+print(f"Rows parsed:      {parsed}")
+print(f"Rows skipped:     {skipped_total}")
+print()
+print("Skipped rows:")
+for row in skipped_rows: 
         print(f"  {row}")
-    print()
-    print(f"Clean data:")
-    for row in clean_rows:
-        name = row['name']
-        category = row['category']
-        amount = row['amount']
-        print(f"  {name} | {category} | ${amount:.2f}")
+print()
+print(f"Clean data:")
+for row in clean_rows:
+    name = row['name']
+    category = row['category']
+    amount = row['amount']
+    print(f"  {name} | {category} | ${amount:.2f}")
