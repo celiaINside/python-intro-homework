@@ -1,14 +1,12 @@
 import os
 import csv
 
-#path = os.path.join(" "report.csv") ..... 
-
 try:
    with open("../data/messy_data.csv", "r") as file:
         reader = csv.DictReader(file)
         rows = list(reader)
 except FileNotFoundError:
-    print('Error: "messy_data.csv" was not found. Please check the file path and try again.')
+    print('Error: "messy_data.csv" was not found. Please check the file path.')
 
 else: 
     skipped_rows = []
